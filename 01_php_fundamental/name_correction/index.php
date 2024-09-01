@@ -3,7 +3,7 @@
 	echo "<hr>Name correction:<hr><br>";
 					
 	
-	$name= "Sessions";
+	$name= "Cookie";
     //echo strtolower($name)."<br>";
 	//echo ucwords(str_replace(' ','_',$name))."<br>";
     echo str_replace(' ', '_', strtolower($name));
