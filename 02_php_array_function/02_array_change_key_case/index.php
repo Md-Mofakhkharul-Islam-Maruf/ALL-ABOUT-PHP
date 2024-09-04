@@ -13,5 +13,6 @@
 	print "<pre>";
 	print_r(array_change_key_case($name, CASE_UPPER));
 	print "</pre>";
+	//nice
 ?>
 <?php include 'footer.php'?>
