@@ -2,22 +2,35 @@
 <?php
 	echo "<hr>Class, Method and Object:<hr><br>";
 	
-	class name{
-		public $name; //access modifier (public,private, protected)
-		public $age="24"; 
+	class person{
+		public $name="Maruf"; //class er vitore joto variable thakbe ta holo class er property
+		public $age;
+		public $goal;
 		
-		public function personname($perameter){
-			$this->name="$perameter";
-			echo "Your name is: ".$this->name."<br>";
+		//class er vitore joto function thakbe ta holo class er method
+		
+		public function personname(){
+			echo "Person name is ".$this->name;         // $this is used as a reference of classes property and it bring the location things
 		}
 		
 		public function personage(){
-			echo "Your age is: ".$this->age."<br>";//$this is used for access of classes property and method
+			echo "<br>Person age is ".$this->age;
+		}
+		
+		public function persongoal($parameter){
+			echo "<br>Person goal is ".$this->goal=$parameter; //assign value of parameter
+		}
+		
+		public function personwish($a){
+			echo "<br>Person wish is $a";
 		}
 	}
-	$nameofobj= new name;
-	$nameofobj->personname("maruf");
-	$nameofobj->personage();
-	echo $nameofobj->name."<br>";//(->) called by object operator
+	$personobj = new person;             // creating Object
+	echo $personobj->name."<br>";       // object operator(->) is used to access everything into class
+	$personobj->personname();
+	$personobj->age="25";              //input value as via as object in age variable
+	$personobj->personage();          // call method as via as object
+	$personobj->persongoal("Developer"); 
+	$personobj->personwish("businessman"); 
 ?>
 <?php include 'footer.php'?>  

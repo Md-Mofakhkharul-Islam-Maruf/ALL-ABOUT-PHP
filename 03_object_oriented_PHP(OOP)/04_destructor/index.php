@@ -1,32 +1,23 @@
 <?php include 'header.php'?>
+
+<?php echo "<hr>Destructor:<hr><br>"; ?> 
+
 <?php
-	echo "<hr>Destructor:<hr><br>";
-	
-	class nclass{
-		public $name;
-		public $age;
-		public $id;
+	class persondetails{
 		
-		function __construct($a,$b){
-			echo "Constructor created<br>";
-			$this->name= $a;
-			$this->age= $b;
+		public function details($e){
+			echo "Your name is $e<br>";
 		}
-		function name_age(){
-			echo "Name is {$this->name} and person age is {$this->age}<br>";
-		}
-		function id($b){
-			$this->id= $b;
-		}
-		function __destruct(){
-			if(! empty($this->id)){
-			echo "Destructor will work when the object of a class will be destroy or unset";
+		public function __destruct(){
+			if(empty($e)){
+				echo "Destructor works when the object is finished thats mean destructor is the last action of a class. Look the unset object to clear your concept below in your script";
 			}
 		}
 	}
-	$obj = new nclass("Maruf","24");
-	$obj->name_age();
-	$obj->id("12");
-	unset($obj);
-?>
+	$persondetailsobj= new persondetails();
+	$persondetailsobj->details("Maruf");
+	unset($persondetailsobj); //Ei line comment korle destructor kaj korbe na cz tokhon object running thakbe
+	
+	//Destructor are called also Magic method because it runs automatically when the object will destroyed
+ ?>
 <?php include 'footer.php'?>  

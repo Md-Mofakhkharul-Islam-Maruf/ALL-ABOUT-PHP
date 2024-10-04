@@ -1,19 +1,21 @@
 <?php include 'header.php'?>
+
+<?php echo "<hr>Constructor:<hr><br>"; ?> 
+
 <?php
-	echo "<hr>Constructor:<hr><br>";
-	class nclass{
+	class persondetails{
 		public $name;
 		public $age;
-		function __construct($a,$b){
-			echo "Constructor created<br>";
-			$this->name= $a;
-			$this->age= $b;
+		
+		public function __construct($a,$b){ 
+			$this->name=$a and $this->age=$b; //Initialize the value in variable through parameter;
 		}
-		function name_age(){
-			echo "Name is {$this->name} and person age is {$this->age}";
+		public function details(){
+			echo "Your name is $this->name and your age is $this->age";
 		}
 	}
-	$obj = new nclass("Maruf","24");
-	$obj->name_age();
-?>
+	$persondetailsobj= new persondetails("Maruf","25"); // Passing value to the construct function though object
+	$persondetailsobj->details();
+	//Constructor are called also Magic method because it runs automatically
+ ?>
 <?php include 'footer.php'?>  
