@@ -4,6 +4,7 @@
 
 	// A class that cannot be instantiated directly. It serves as a blueprint for other classes, containing abstract methods that must be implemented by subclasses. abstract class polymorphism facilate kore.
 	
+	// abstract class er object create kora jayna tai er methode ba property access korte hole subclass create kore then object create kore subclass access korte hoy.	
 	abstract class student{
 		
 		public $name="Maruf";

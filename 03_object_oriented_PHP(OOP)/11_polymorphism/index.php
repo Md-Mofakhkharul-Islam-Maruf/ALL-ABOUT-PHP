@@ -2,6 +2,7 @@
 <?php echo "<hr>Polymorphism:<hr><br>"; ?> 
 <?php
 echo "When I use polymorphism, a single method call can work with multiple types of objects, and each type can provide its own specific behavior for that method.<br>";
+ 
 	class admin{
 		public function show(){
 			echo "From main function<br>";
