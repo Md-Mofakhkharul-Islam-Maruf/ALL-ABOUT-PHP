@@ -1,12 +1,12 @@
 <?php include 'header.php'?>
 <?php echo "<hr>Strategy pattern:<hr><br>"; ?> 
 <?php
-   spl_autoload_register(function($clname)){
-	   include "classes/$clname.".php;
-   }
-   
-   $obj-user= new user;
-   $msg =$obj-user->getmsg();
+   spl_autoload_register(function($clname){
+   include "classes/".$clname.".php";
+		});
+		
+   $obj_user = new user;
+   $msg =$obj_user->getmsg();
    
    switch($msg){
 	   case 'email':
